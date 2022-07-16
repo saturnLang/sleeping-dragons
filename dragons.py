@@ -1,4 +1,5 @@
 import math
+import random
 WIDTH = 800
 HEIGHT = 60
 CENTER_X = WIDTH / 2
@@ -47,7 +48,7 @@ hard_lair = {
 lairs = [easy_lair, medium_lair, hard_lair]
 hero = Actor("hero", pos=HERO_START)
 def draw():
-   global liars, eggs_collected, lives, game_complete
+   global lairs, eggs_collected, lives, game_complete
    screen.clear()
    screen.blit()
    if game_over:
@@ -71,5 +72,79 @@ def draw_counters(eggs_collected, lives):
 			 fontsize = 40,
 			 pos=(90, HEIGHT  - 30),
 			 color=FONT_COLOR)	
-	
-	
+	def update():
+	if keyboard.right:
+		hero.x += MOVE_DISTANCE
+		if hero.x > WIDTH:
+			hero.x = WIDTH
+	elif keyboard.left:
+		hero.x  -= MOVE_DISTANCE
+		if hero.x < 0:
+			hero.x = 0
+	elif keyboard.down:
+		hero.y += MOVE_DISTANCE
+		if hero.y > HEIGHT:
+			hero.y = HEIGHT
+	elif keyboard.up:
+		hero.y -= MOVIE_DISTANCE
+		if hero.y < 0:
+			hero.y = 0
+    check_for_collisons()
+def update_lairs():
+	global lairs, hero, lives
+	for lair in lairs:
+		if lair["dragon"].image == "dragon-asleep":
+			update_sleeping_dragon(lair)
+		elif lair["dragon"].image == "dragon-awake":
+			update_waking_dragon(lair)
+		update_egg(lair)
+		clock.schedule_interval(update_lair, 1)
+def update_sleeping_dragon(lair):
+	if lair["sleep_counter"] >= lair["sleep_length"]:
+		if random.choice([True, False]):
+			lair["dragon"].image = "dragon-awake"
+	else:
+		lair["sleep_counter"] += 1
+def update_waking_dragon(lair):
+	if lair["wake_counter"] >= DRAGON_WAKE_TIME:
+		lair["dragon"].image = "dragon-asleep"
+		lair["wake_counter"] = 0
+	else:
+		lair["wake_counter"] += 1
+def update_egg(lair):
+	if lair["egg_hidden"] is True:
+		if lair["egg_hide_counter"] >= EGG_HIDE_TIME:
+			lair["egg_hidden"] = False
+			lair["egg_hide_counter"] = 0
+		else:
+			lair["egg_hide_counter"] += 1
+def check_for_collisions():
+	global lairs, eggs_collected, lives, reset_required, game_complete
+	for lair in lairs:
+		if lair["egg_hidden"] is False:
+			check_for_egg_collision(lair)
+		if lair["dragon"].image == "dragon-awake" and reset_required is False:
+			check_for_dragon_collision(lair)
+def check_for_dragon_collision(lair):
+	x_distance = hero.x - lair["dragon"].x
+	y_distance = hero.y -lair["dragon"].y
+	distance = math.hypot(x_distance, y_distance)
+	if distance < ATTACK_DISTANCE:
+		handle_dragon_collison()
+def handle_dragon_collison():
+	global resset_required
+	reset_required = True
+	animate(hero, pos=HERO_START, on_finished=subtract_life)
+def check_for_egg_collision(lair):
+	global eggs_collected, game_complete
+	if hero.colliderect(lair["eggs"]):
+		lair["egg_hidden"] = True
+		eggs_collecte += lair["egg_count"]
+		if eggs_collected >= EGG.TARGET:
+			game_complete = True
+def subtract_life():
+	global lives, reset_required, game_over
+	lives -= 1
+	if lives == 0:
+		game_over = True
+		reset_required = False
