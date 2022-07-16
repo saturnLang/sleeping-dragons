@@ -1,4 +1,5 @@
 import math
+import pgzrun
 import random
 WIDTH = 800
 HEIGHT = 60
@@ -148,3 +149,4 @@ def subtract_life():
 	if lives == 0:
 		game_over = True
 		reset_required = False
+pgzrun.go()
