@@ -140,7 +140,7 @@ def check_for_egg_collision(lair):
 	global eggs_collected, game_complete
 	if hero.colliderect(lair["eggs"]):
 		lair["egg_hidden"] = True
-		eggs_collecte += lair["egg_count"]
+		eggs_collected += lair["egg_count"]
 		if eggs_collected >= EGG.TARGET:
 			game_complete = True
 def subtract_life():
