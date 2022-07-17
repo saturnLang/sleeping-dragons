@@ -1,5 +1,5 @@
 import math
-from pgzrun import *
+from pygame import *
 import random
 WIDTH = 800
 HEIGHT = 600
