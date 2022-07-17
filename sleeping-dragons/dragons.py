@@ -2,6 +2,7 @@ import math
 import random
 WIDTH = 800
 HEIGHT = 600
+RED = (30)
 CENTER_X = WIDTH / 2
 CENTER_Y = HEIGHT / 2
 CENTER = (CENTER_X, CENTER_Y)
@@ -54,7 +55,7 @@ def draw():
    screen.clear()
    screen.blit("dungon", 0, 0)
    if game_over:
-       screen.draw.text("YOU DIED! No One Said It Would Be Easy!", fontsize=60, center=CENTER, color=FONT_COLOR)
+       screen.draw.text("YOU DIED! No One Said It Would Be Easy!", fontsize=60, center=CENTER, color=RED)
    elif game_complete:
        screen.draw.text("YOU WON!", fontsize=60, center=CENTER, color=FONT_COLOR)
    else:
