@@ -1,1 +1,2 @@
-import credits
+import math
+import random
