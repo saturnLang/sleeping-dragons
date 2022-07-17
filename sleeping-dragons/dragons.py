@@ -149,8 +149,8 @@ def check_for_egg_collision(lair):
 def subtract_life():
 	global lives, reset_required, game_over
 	lives -= 1
-	if hard_mode == True:
-		lives -= 2
 	if lives == 0:
 		game_over = True
 		reset_required = False
+		if hard_mode == True:
+			lives -= 2
