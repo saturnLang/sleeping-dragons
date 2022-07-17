@@ -91,8 +91,6 @@ def update():
 		hero.y -= MOVIE_DISTANCE
 		if hero.y < 0:
 			hero.y = 0
-	elif keyboard.space:
-		exit()
     check_for_collisons()
 def update_lairs():
 	global lairs, hero, lives
