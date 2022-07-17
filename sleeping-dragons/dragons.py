@@ -92,7 +92,7 @@ def update():
 		if hero.y < 0:
 			hero.y = 0
 	elif keyboard.space:
-		import pausemenu
+		exit()
     check_for_collisons()
 def update_lairs():
 	global lairs, hero, lives
