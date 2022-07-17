@@ -1,5 +1,5 @@
 import math
-import pgzrun
+from pgzrun import *
 import random
 WIDTH = 800
 HEIGHT = 600
