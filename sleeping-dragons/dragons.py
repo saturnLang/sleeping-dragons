@@ -35,8 +35,7 @@ medium_lair = {
 	"egg_hide_counter": 0,
 	"sleep_length": 7,
 	"sleep_counter": 0,
-	"wake_counter": 0
-	
+	"wake_counter": 0	
 }
 hard_lair = {
 	"dragon": Actor("dragon-asleep", pos=(600, 500)),
