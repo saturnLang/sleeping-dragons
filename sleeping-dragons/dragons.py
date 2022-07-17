@@ -50,7 +50,7 @@ end_lair = {
 	"egg_count": 3,
 	"egg_hidden": False,
 	"egg_hide_counter": 0,
-	"sleep_length": 4,
+	"sleep_length": 3,
 	"sleep_counter":  0
 	"wake_counter": 0
 }
