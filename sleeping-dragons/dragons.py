@@ -145,7 +145,7 @@ def check_for_egg_collision(lair):
 			game_complete = True
 def subtract_life():
 	global lives, reset_required, game_over
-	lives -= 2
+	lives -= 1
 	if lives == 0:
 		game_over = True
 		reset_required = False
