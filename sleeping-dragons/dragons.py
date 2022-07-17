@@ -157,7 +157,7 @@ def check_for_egg_collision(lair):
 			import outside
 def subtract_life():
 	global lives, reset_required, game_over
-	lives -= 1
+	lives -= 2
 	if lives == 0:
 		game_over = True
 		reset_required = False
