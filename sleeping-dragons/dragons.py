@@ -53,6 +53,7 @@ end_lair = {
 	"sleep_length": 3,
 	"sleep_counter":  0
 	"wake_counter": 0
+	lives = 10
 }
 lairs = [easy_lair, medium_lair, hard_lair, end_lair]
 hero = Actor("hero", pos=HERO_START)
