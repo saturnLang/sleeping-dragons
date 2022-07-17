@@ -5,7 +5,7 @@ from pygame.locals import *
 pygame.init()
 pygame.display.set_caption("Sleeping Dragons I - End Credits")
 screen = pygame.set_mode(800,600)
-credit_list  ["CREDITS - Sleeping Dragons", "created by SaturnLang", "THANK YOU FOR PLAYING Sleeping Dragons", "Powered By Python", "PART TWO COMING SOON!", "TO BE CONTINUED SLEEPING DRAGONS II"]
+credit_list  ["CREDITS - Sleeping Dragons", "created by SaturnLang", "THANK YOU FOR PLAYING Sleeping Dragons", "Powered By Python", "PART TWO COMING SOON!", "TO BE CONTINUED SLEEPING DRAGONS II", "Sleeping Dragons @2022 SaturnLang"]
 texts = []
 for i, line in enumerate(credit_list):
         s = font.render(line, 1, (10, 10, 10))
