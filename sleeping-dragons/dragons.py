@@ -43,9 +43,18 @@ hard_lair = {
 	"egg_hide_counter": 0,
 	"sleep_length": 4,
 	"sleep_counter": 0,
-	"wake_counter":0
+	"wake_counter": 0
 }
-lairs = [easy_lair, medium_lair, hard_lair]
+end_lair = {
+	"dragon": Actor("dragon-asleep", pos=(600,500)), 
+	"egg_count": 3,
+	"egg_hidden": False,
+	"egg_hide_counter": 0,
+	"sleep_length": 4,
+	"sleep_counter":  0
+	"wake_counter": 0
+}
+lairs = [easy_lair, medium_lair, hard_lair, end_lair]
 hero = Actor("hero", pos=HERO_START)
 def draw():
    global lairs, eggs_collected, lives, game_complete
