@@ -17,9 +17,9 @@ eggs_collected = 0
 game_over = False
 reset_required = False
 easy_lair = {
-	"dragon": Actor("dragon-assleep", pos=(600, 300)),
-	"eggs": Actor("two-eggs", pos=(400, 300)),
-	"egg_count": 2,
+	"dragon": Actor("dragon-assleep", pos=(600, 100)),
+	"eggs": Actor("one-egg", pos=(400, 100)),
+	"egg_count": 1,
 	"egg_hidden": False,
 	"egg_hide_counter": 0,
 	"sleep_length": 7,
@@ -39,6 +39,7 @@ medium_lair = {
 }
 hard_lair = {
 	"dragon": Actor("dragon-asleep", pos=(600, 500)),
+	"eggs": Actor("three-eggs", pos=(400:500))
 	"egg_count": 3,
 	"egg_hidden": False,
 	"egg_hide_counter": 0,
