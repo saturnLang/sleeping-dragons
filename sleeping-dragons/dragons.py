@@ -151,4 +151,4 @@ def subtract_life():
 		game_over = True
 		reset_required = False
 if game_complete == True:
-	import credits
+	import missiontwo
