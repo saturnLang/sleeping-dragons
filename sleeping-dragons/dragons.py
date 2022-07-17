@@ -150,3 +150,5 @@ def subtract_life():
 	if lives == 0:
 		game_over = True
 		reset_required = False
+if game_complete == True:
+	import credits
