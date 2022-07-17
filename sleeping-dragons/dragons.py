@@ -26,7 +26,7 @@ easy_lair = {
 	"sleep_counter:" 0,
 	"wake_counter": 0
 }
-meduium_lair = {
+medium_lair = {
 	"dragon": Actor("dragon-asleep", pos="600, 300")),
 	"eggs": Actor("two-eggs", pos="400, 300")),
 	"egg_count": 2,
