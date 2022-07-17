@@ -53,7 +53,7 @@ def draw():
    screen.clear()
    screen.blit()
    if game_over:
-       screen.draw.text("YOU LOSE!", fontsize=60, center=CENTER, color=FONT_COLOR)
+       screen.draw.text("YOU DIED!", fontsize=60, center=CENTER, color=FONT_COLOR)
    elif game_complete:
        screen.draw.text("YOU WON!", fontsize=60, center=CENTER, color=FONT_COLOR)
    else:
