@@ -152,6 +152,7 @@ def check_for_egg_collision(lair):
 		eggs_collected += lair["egg_count"]
 		if eggs_collected >= EGG.TARGET:
 			game_complete = True
+			import outside
 def subtract_life():
 	global lives, reset_required, game_over
 	lives -= 1
