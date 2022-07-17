@@ -67,7 +67,7 @@ def draw_lairs(lairs_to_draw):
             if lair["egg_hidden"] is False:
                 lair["eggs"].draw()
 def draw_counters(eggs_collected, lives):
-	screen.blit("egg_count", (0, HEIGHT, - 30))
+	screen.blit("egg_count", (0, HEIGHT - 30))
 	screen.draw.text(str(lives),
 			 fontsize = 40,
 			 pos=(90, HEIGHT  - 30),
