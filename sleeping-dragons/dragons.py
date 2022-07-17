@@ -73,7 +73,7 @@ def draw_counters(eggs_collected, lives):
 			 fontsize = 40,
 			 pos=(90, HEIGHT  - 30),
 			 color=FONT_COLOR)	
-	def update():
+def update():
 	if keyboard.right:
 		hero.x += MOVE_DISTANCE
 		if hero.x > WIDTH:
