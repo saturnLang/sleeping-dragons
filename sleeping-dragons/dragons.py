@@ -52,7 +52,7 @@ hero = Actor("hero", pos=HERO_START)
 def draw():
    global lairs, eggs_collected, lives, game_complete
    screen.clear()
-   screen.blit()
+   screen.blit("dungon", 0, 0)
    if game_over:
        screen.draw.text("YOU DIED!", fontsize=60, center=CENTER, color=FONT_COLOR)
    elif game_complete:
