@@ -35,7 +35,7 @@ medium_lair = {
 	"sleep_length": 7,
 	"sleep_counter": 0,
 	"wake_counter": 0
-	lives += 1
+	
 }
 hard_lair = {
 	"dragon": Actor("dragon-asleep", pos=(600, 500)),
@@ -45,7 +45,6 @@ hard_lair = {
 	"sleep_length": 4,
 	"sleep_counter": 0,
 	"wake_counter": 0
-	lives += 1
 }
 lairs = [easy_lair, medium_lair, hard_lair]
 hero = Actor("hero", pos=HERO_START)
@@ -144,7 +143,6 @@ def check_for_egg_collision(lair):
 		eggs_collected += lair["egg_count"]
 		if eggs_collected >= EGG.TARGET:
 			game_complete = True
-			import outside
 def subtract_life():
 	global lives, reset_required, game_over
 	lives -= 2
