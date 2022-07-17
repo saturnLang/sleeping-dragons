@@ -2,7 +2,7 @@ import math
 import pgzrun
 import random
 WIDTH = 800
-HEIGHT = 60
+HEIGHT = 600
 CENTER_X = WIDTH / 2
 CENTER_Y = HEIGHT / 2
 CENTER = (CENTER_X, CENTER_Y)
