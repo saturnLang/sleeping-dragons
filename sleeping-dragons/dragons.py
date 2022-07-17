@@ -57,6 +57,7 @@ def draw():
        screen.draw.text("Game Over! No One Said It Would Be Easy", fontsize=60, center=CENTER, color=RED)
    elif game_complete:
        screen.draw.text("YOU WON!", fontsize=60, center=CENTER, color=FONT_COLOR)
+       screen.draw.text("YOU BEAT THE GAME!")
    else:
         hero.draw()
         draw_lairs(lairs)
@@ -150,3 +151,4 @@ def subtract_life():
 	if lives == 0:
 		game_over = True
 		reset_required = False
+	
