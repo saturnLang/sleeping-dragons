@@ -4,4 +4,5 @@ https://python.org
 open command prompt and enter: python -m pip install -U pip
 than enter: pip install pygame
 than enter: pip install pgzero
-than enter: pgzrun than drag the game file into the command prompt
+than enter: pgzrun 
+than drag the game file into the command prompt
