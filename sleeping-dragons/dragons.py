@@ -89,7 +89,7 @@ def update():
 		if hero.y > HEIGHT:
 			hero.y = HEIGHT
 	elif keyboard.up:
-		hero.y -= MOVIE_DISTANCE
+		hero.y -= MOVE_DISTANCE
 		if hero.y < 0:
 			hero.y = 0
     check_for_collisons()
