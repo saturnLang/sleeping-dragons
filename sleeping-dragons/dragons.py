@@ -57,7 +57,7 @@ def draw():
        screen.draw.text("YOU DIED!", fontsize=60, center=CENTER, color=FONT_COLOR)
    elif game_complete:
        screen.draw.text("YOU WON!", fontsize=60, center=CENTER, color=FONT_COLOR)
-       import mission2
+       import missiontwo
    else:
         hero.draw()
         draw_lairs(lairs)
