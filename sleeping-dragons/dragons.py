@@ -35,6 +35,7 @@ medium_lair = {
 	"sleep_length": 7,
 	"sleep_counter": 0,
 	"wake_counter": 0
+	lives += 1
 }
 hard_lair = {
 	"dragon": Actor("dragon-asleep", pos=(600, 500)),
@@ -44,6 +45,7 @@ hard_lair = {
 	"sleep_length": 4,
 	"sleep_counter": 0,
 	"wake_counter": 0
+	lives += 1
 }
 end_lair = {
 	"dragon": Actor("dragon-asleep", pos=(600,500)), 
@@ -53,7 +55,7 @@ end_lair = {
 	"sleep_length": 3,
 	"sleep_counter":  0
 	"wake_counter": 0
-	lives = 10
+	lives += 1
 }
 lairs = [easy_lair, medium_lair, hard_lair, end_lair]
 hero = Actor("hero", pos=HERO_START)
