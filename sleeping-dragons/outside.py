@@ -10,4 +10,4 @@ HERO_START = (200, 300)
 lives = 6
 def draw():
   screen.fill(0,0,255)
-  screen.draw.text(lives)
+  screen.draw.text(lives,)
