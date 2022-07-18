@@ -17,7 +17,6 @@ lives = 3
 eggs_collected = 0
 game_over = False
 reset_required = False
-hard_mode = False
 easy_lair = {
 	"dragon": Actor("dragon-assleep", pos=(600, 100)),
 	"eggs": Actor("one-egg", pos=(400, 100)),
@@ -47,7 +46,6 @@ hard_lair = {
 	"sleep_length": 4,
 	"sleep_counter": 0,
 	"wake_counter": 0
-	hard_mode = True
 }
 lairs = [easy_lair, medium_lair, hard_lair]
 hero = Actor("hero", pos=HERO_START)
@@ -149,8 +147,6 @@ def check_for_egg_collision(lair):
 def subtract_life():
 	global lives, reset_required, game_over
 	lives -= 1
-	if hard_mode == True:
-		lives -= 2
-	elif lives == 0 and hard_mode is False:
+	if lives == 0:
 		game_over = True
 		reset_required = False
