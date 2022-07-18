@@ -54,7 +54,7 @@ def draw():
    screen.clear()
    screen.blit("dungon", 0, 0)
    if game_over:
-       screen.draw.text("Game Over! No One Said It Would Be Easy", fontsize=60, center=CENTER, color=RED)
+       screen.draw.text("Game Over! YOU Sucked Way TOO HARD", fontsize=60, center=CENTER, color=RED)
    elif game_complete:
        screen.draw.text("YOU WON!", fontsize=60, center=CENTER, color=FONT_COLOR)
    else:
