@@ -151,6 +151,6 @@ def subtract_life():
 	lives -= 1
 	if hard_mode == True:
 		lives -= 2
-	if lives == 0:
+	elif lives == 0 and hard_mode is False:
 		game_over = True
 		reset_required = False
